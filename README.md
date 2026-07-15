@@ -48,6 +48,23 @@ Use $skill-installer to install https://github.com/adiosdotdev/mcp/tree/main/plu
 
 Skill-only installs do not configure the MCP server; add the `adios` MCP connection separately.
 
+## Use through npm
+
+For MCP clients that start a local stdio command, use the public npm package:
+
+```json
+{
+  "mcpServers": {
+    "adios": {
+      "command": "npx",
+      "args": ["-y", "@adiosdotdev/mcp"]
+    }
+  }
+}
+```
+
+The command starts a local bridge to the hosted Adios endpoint and opens OAuth when the client connects. Nothing from the Adios platform runs locally.
+
 ## Other MCP clients
 
 Create a remote or Streamable HTTP MCP connection named `adios` with this URL:
@@ -76,6 +93,7 @@ Deploys, workload changes, runtime stops, and file deletion must remain approval
 plugins/adios-mcp/.codex-plugin/       Plugin manifest
 plugins/adios-mcp/.mcp.json            Hosted MCP connection
 plugins/adios-mcp/skills/              Reusable Codex workflows
+bin/adios-mcp.js                       npm stdio bridge command
 docs/                                  Tool and operating reference
 examples/                              Direct client configuration
 ```

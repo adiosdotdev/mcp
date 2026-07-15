@@ -1,0 +1,46 @@
+{
+  "name": "@adiosdotdev/mcp",
+  "version": "0.1.0",
+  "description": "Connect MCP clients to Adios workspaces, previews, builds, logs, and deployments.",
+  "type": "module",
+  "bin": {
+    "adios-mcp": "bin/adios-mcp.js"
+  },
+  "files": [
+    "bin/"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "npm test && npm pack --dry-run"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "keywords": [
+    "adios",
+    "mcp",
+    "model-context-protocol",
+    "deployment",
+    "developer-tools"
+  ],
+  "author": {
+    "name": "Adios Global LLC",
+    "url": "https://www.adios.dev"
+  },
+  "license": "MIT",
+  "homepage": "https://www.adios.dev/mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adiosdotdev/mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adiosdotdev/mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "mcp-remote": "^0.1.38"
+  }
+}
