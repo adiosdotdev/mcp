@@ -1,0 +1,20 @@
+{
+  "name": "adios",
+  "interface": {
+    "displayName": "Adios"
+  },
+  "plugins": [
+    {
+      "name": "adios-mcp",
+      "source": {
+        "source": "local",
+        "path": "./plugins/adios-mcp"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

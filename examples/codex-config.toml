@@ -1,0 +1,4 @@
+[mcp_servers.adios]
+url = "https://api.adios.dev/v1/mcp"
+auth = "oauth"
+default_tools_approval_mode = "writes"

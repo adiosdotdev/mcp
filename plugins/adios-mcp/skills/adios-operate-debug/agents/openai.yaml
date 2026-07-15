@@ -1,0 +1,13 @@
+interface:
+  display_name: "Operate & Debug Adios"
+  short_description: "Inspect Adios status, commands, and logs"
+  default_prompt: "Use $adios-operate-debug to diagnose this Adios workspace and suggest the safest fix."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "adios"
+      description: "Hosted Adios workspace and workload operations"
+      transport: "streamable_http"
+      url: "https://api.adios.dev/v1/mcp"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,13 @@
+interface:
+  display_name: "Build & Deploy with Adios"
+  short_description: "Build, preview, and deploy Adios projects"
+  default_prompt: "Use $adios-build-deploy to build, preview, and deploy this project with Adios."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "adios"
+      description: "Hosted Adios project and deployment tools"
+      transport: "streamable_http"
+      url: "https://api.adios.dev/v1/mcp"
+policy:
+  allow_implicit_invocation: true
