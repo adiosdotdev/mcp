@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Use the npm lockfile in the Glama Docker build and remove the nonexistent
+  compilation step. Document Glama build settings and OAuth requirements.
+
 ### Changed
 
 - Upgrade the npm bridge to `mcp-remote` 0.8.3 and require Node.js 20.18.1 or later.

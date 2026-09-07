@@ -127,6 +127,9 @@ Let the client complete OAuth rather than adding a static token. If the client d
 
 See [`docs/tool-reference.md`](docs/tool-reference.md) for the current tool groups and approval-sensitive operations. The live `/tools` endpoint remains the source of truth.
 
+For the Glama directory listing, see [`docs/glama.md`](docs/glama.md) for build
+settings and hosted connector setup.
+
 ## Safety
 
 Deploys, workload changes, runtime stops, remote Git pushes, and file deletion must remain approval-sensitive. Never commit Adios OAuth tokens, app credentials, or workspace secrets to this repository or to project source.
