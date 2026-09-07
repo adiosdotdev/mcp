@@ -1,6 +1,6 @@
 {
   "name": "@adiosdotdev/mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Connect MCP clients to Adios workspaces, previews, builds, logs, and deployments.",
   "type": "module",
   "bin": {
@@ -14,7 +14,7 @@
     "check": "npm test && npm pack --dry-run"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=20.18.1"
   },
   "keywords": [
     "adios",
@@ -41,6 +41,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "dependencies": {
-    "mcp-remote": "^0.1.38"
+    "mcp-remote": "^0.8.3"
   }
 }

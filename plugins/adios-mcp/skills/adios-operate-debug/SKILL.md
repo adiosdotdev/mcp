@@ -1,6 +1,6 @@
 ---
 name: adios-operate-debug
-description: Diagnose and operate Adios workspaces, preview runtimes, commands, builds, and deployed workloads through the hosted Adios MCP server. Use when Codex needs to inspect status or Git state, read runtime/build/command logs, explain a failed preview or deployment, review workspace context for security, or perform a user-approved restart or stop.
+description: Diagnose and operate Adios workspaces, preview runtimes, commands, builds, and deployed workloads through the hosted Adios MCP server. Use when work requires inspecting status or Git state, reading runtime/build/command logs, explaining a failed preview or deployment, reviewing workspace context for security, or performing a user-approved restart or stop.
 ---
 
 # Operate and Debug Adios

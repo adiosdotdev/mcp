@@ -47,6 +47,10 @@ function findPackageJSON(packageName) {
 }
 
 function resolveBridgeBin() {
+  if (process.env.ADIOS_MCP_REMOTE_BIN) {
+    return resolve(process.env.ADIOS_MCP_REMOTE_BIN);
+  }
+
   const packagePath = findPackageJSON("mcp-remote");
   const manifest = readJSON(packagePath);
   const bin = typeof manifest.bin === "string"

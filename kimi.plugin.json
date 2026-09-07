@@ -1,0 +1,25 @@
+{
+  "name": "adios-mcp",
+  "version": "0.2.0",
+  "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
+  "keywords": ["adios", "mcp", "deployment", "workspaces", "developer-tools"],
+  "author": {
+    "name": "Adios Global LLC",
+    "url": "https://www.adios.dev"
+  },
+  "homepage": "https://www.adios.dev/mcp",
+  "license": "MIT",
+  "interface": {
+    "displayName": "Adios MCP",
+    "shortDescription": "Build and operate projects on Adios",
+    "longDescription": "Connect to the OAuth-scoped Adios MCP server and use guided workflows to create workspaces, edit files, run previews, inspect logs, and deploy approved changes.",
+    "developerName": "Adios",
+    "websiteURL": "https://www.adios.dev/mcp"
+  },
+  "skills": "./skills/",
+  "mcpServers": {
+    "adios": {
+      "url": "https://api.adios.dev/v1/mcp"
+    }
+  }
+}

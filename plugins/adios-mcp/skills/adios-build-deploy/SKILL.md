@@ -1,6 +1,6 @@
 ---
 name: adios-build-deploy
-description: Build, preview, validate, and deploy projects through the hosted Adios MCP server. Use when Codex needs to create or import an Adios workspace, upload or edit project files, generate adios.yaml, run lint or build commands, start a preview, inspect build output, or deploy a verified workspace after explicit approval.
+description: Build, preview, validate, and deploy projects through the hosted Adios MCP server. Use when work requires creating or importing an Adios workspace, uploading or editing project files, generating adios.yaml, running lint or build commands, starting a preview, inspecting build output, or deploying a verified workspace after explicit approval.
 ---
 
 # Build and Deploy with Adios
@@ -21,7 +21,7 @@ Use the `adios` MCP server to move source code through an inspectable workspace,
 
 ## Guardrails
 
-- Treat `delete_workspace_file`, `stop_workspace_run`, `deploy_workspace`, and `deploy_workload` as approval-sensitive. Never infer approval from a broad request to investigate, fix, preview, or build.
+- Treat `delete_workspace_file`, `workspace_git_push`, `stop_workspace_run`, `deploy_workspace`, and `deploy_workload` as approval-sensitive. Never infer approval from a broad request to investigate, fix, preview, or build.
 - Do not overwrite unrelated files. Read an existing file before replacing it unless its full content was supplied by the user in the current task.
 - Keep `team_id`, `workspace_id`, `command_id`, `build_id`, and `workload_id` from tool results; do not guess IDs.
 - A successful tool call is not enough: verify queued commands, runtime readiness, and post-deploy logs.

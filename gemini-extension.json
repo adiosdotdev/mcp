@@ -1,0 +1,11 @@
+{
+  "name": "adios-mcp",
+  "version": "0.2.0",
+  "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
+  "mcpServers": {
+    "adios": {
+      "httpUrl": "https://api.adios.dev/v1/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

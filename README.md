@@ -1,8 +1,8 @@
 # Adios MCP
 
-Use Adios workspaces, previews, builds, logs, and deployments from Codex, ChatGPT, and other MCP clients.
+Use Adios workspaces, previews, builds, logs, and deployments from Codex, Claude Code, Gemini CLI, Kimi Code, GitHub Copilot, ChatGPT, and other MCP clients.
 
-This repository packages the hosted Adios MCP service for public installation. It includes a Codex marketplace plugin, two reusable skills, connection examples, and a readable tool reference. The server runs at Adios, so users don't need to deploy anything from this repository.
+This repository packages the hosted Adios MCP service for public installation. It includes a portable Agent Plugins v1 package, Codex and Claude Code marketplace plugins, native Gemini CLI and Kimi Code extensions, two reusable workflows, connection examples, and a readable tool reference. The server runs at Adios, so users don't need to deploy anything from this repository.
 
 ## Endpoints
 
@@ -34,6 +34,49 @@ codex mcp login adios
 
 The equivalent `config.toml` is in [`examples/codex-config.toml`](examples/codex-config.toml).
 
+## Install in Claude Code
+
+Register the marketplace and install the plugin:
+
+```sh
+claude plugin marketplace add adiosdotdev/mcp
+claude plugin install adios-mcp@adios
+```
+
+Restart Claude Code or run `/reload-plugins`, then open `/mcp` and complete OAuth for the Adios server. The plugin installs the MCP connection and both workflow skills.
+
+## Install in Gemini CLI
+
+Install the repository as a Gemini CLI extension:
+
+```sh
+gemini extensions install https://github.com/adiosdotdev/mcp
+```
+
+Restart Gemini CLI after installation. The extension loads the hosted MCP server and both workflow skills. If sign-in does not start automatically, run `/mcp auth adios` in Gemini CLI and complete OAuth in the browser.
+
+## Install in Kimi Code
+
+Install the repository from the Kimi Code plugin manager:
+
+```text
+/plugins install https://github.com/adiosdotdev/mcp
+/reload
+/mcp-config login adios
+```
+
+Complete OAuth in the browser after the login command. The plugin connects Kimi Code, including Kimi K3 sessions, to the hosted MCP server and loads both workflow skills.
+
+## Install as a portable Agent Plugin
+
+Clients implementing [Agent Plugins v1](https://agent-plugins.org/) discover the root `plugin.json`, `mcp.json`, and `skills/` automatically. For example, install the repository in GitHub Copilot CLI with:
+
+```sh
+copilot plugins install adiosdotdev/mcp
+```
+
+The portable package starts `npx -y @adiosdotdev/mcp`, which bridges stdio to the hosted endpoint and completes Adios OAuth when the client connects.
+
 ## Install only the skills
 
 Ask Codex to install either GitHub path with `$skill-installer`:
@@ -50,7 +93,9 @@ Skill-only installs do not configure the MCP server; add the `adios` MCP connect
 
 ## Use through npm
 
-For MCP clients that start a local stdio command, use the public npm package:
+For MCP clients that start a local stdio command, use the public npm package.
+
+Requires Node.js 20.18.1 or later and npm.
 
 ```json
 {
@@ -84,15 +129,23 @@ See [`docs/tool-reference.md`](docs/tool-reference.md) for the current tool grou
 
 ## Safety
 
-Deploys, workload changes, runtime stops, and file deletion must remain approval-sensitive. Never commit Adios OAuth tokens, app credentials, or workspace secrets to this repository or to project source.
+Deploys, workload changes, runtime stops, remote Git pushes, and file deletion must remain approval-sensitive. Never commit Adios OAuth tokens, app credentials, or workspace secrets to this repository or to project source.
 
 ## Repository layout
 
 ```text
 .agents/plugins/marketplace.json       Codex marketplace catalog
-plugins/adios-mcp/.codex-plugin/       Plugin manifest
+.claude-plugin/marketplace.json        Claude Code marketplace catalog
+plugin.json                            Portable Agent Plugins v1 manifest
+mcp.json                               Portable npm stdio bridge configuration
+kimi.plugin.json                       Kimi Code plugin manifest
+plugins/adios-mcp/.codex-plugin/       Codex plugin manifest
+plugins/adios-mcp/.claude-plugin/      Claude Code plugin manifest
 plugins/adios-mcp/.mcp.json            Hosted MCP connection
-plugins/adios-mcp/skills/              Reusable Codex workflows
+plugins/adios-mcp/skills/              Codex and Claude Code workflows
+gemini-extension.json                  Gemini CLI extension manifest
+GEMINI.md                              Gemini CLI extension context
+skills/                                Portable, Gemini, and Kimi workflow copies
 bin/adios-mcp.js                       npm stdio bridge command
 docs/                                  Tool and operating reference
 examples/                              Direct client configuration

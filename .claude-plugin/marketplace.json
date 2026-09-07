@@ -1,0 +1,16 @@
+{
+  "name": "adios",
+  "owner": {
+    "name": "Adios Global LLC"
+  },
+  "description": "Adios developer workflows and hosted MCP integrations for Claude Code.",
+  "plugins": [
+    {
+      "name": "adios-mcp",
+      "source": "./plugins/adios-mcp",
+      "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
+      "category": "Developer Tools",
+      "tags": ["adios", "mcp", "deployment", "workspaces"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "adios-mcp",
+  "version": "0.2.0",
+  "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
+  "author": {
+    "name": "Adios Global LLC",
+    "url": "https://www.adios.dev"
+  },
+  "homepage": "https://www.adios.dev/mcp",
+  "repository": "https://github.com/adiosdotdev/mcp",
+  "license": "MIT",
+  "keywords": ["adios", "mcp", "deployment", "workspaces", "developer-tools"]
+}
