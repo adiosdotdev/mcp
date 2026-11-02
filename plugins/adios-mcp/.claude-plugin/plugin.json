@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "adios-mcp",
   "displayName": "Adios.dev",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
   "author": {
     "name": "Adios Global LLC",

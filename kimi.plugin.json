@@ -1,6 +1,6 @@
 {
   "name": "adios-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
   "keywords": ["adios", "mcp", "deployment", "workspaces", "developer-tools"],
   "author": {

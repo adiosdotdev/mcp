@@ -1,6 +1,6 @@
 {
   "name": "adios-mcp",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Adios.dev helps users inspect team projects, edit workspace files, build and preview applications, review configuration and logs, and deploy approved builds to Adios workloads. It also retrieves hosted repository, database, agent-run, and observability information available to the signed-in team.",
   "author": {
     "name": "Adios Global LLC",
