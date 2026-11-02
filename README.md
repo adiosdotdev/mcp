@@ -17,13 +17,15 @@ Tool calls use Adios OAuth and act as the signed-in user. The connection can rea
 
 ## Install in Codex
 
-Register the GitHub marketplace:
+Register the GitHub marketplace, install the plugin, and sign in:
 
 ```sh
 codex plugin marketplace add adiosdotdev/mcp
+codex plugin add adios-mcp@adios
+codex mcp login adios
 ```
 
-Restart the ChatGPT desktop app, open **Plugins**, choose the **Adios** marketplace, install **Adios.dev**, and complete OAuth when prompted. The plugin installs the remote MCP connection and both workflow skills.
+`codex mcp login` opens the browser to complete Adios OAuth. The plugin installs the remote MCP connection and both workflow skills. Check the connection with `codex mcp list`.
 
 To connect only the MCP server without the plugin:
 

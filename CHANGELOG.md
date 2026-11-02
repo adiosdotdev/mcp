@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Fixed
+
+- Correct the Codex install steps: install the plugin with
+  `codex plugin add adios-mcp@adios` and sign in with `codex mcp login adios`.
+
 ## [1.0.2] - 2026-11-02
 
 ### Added
