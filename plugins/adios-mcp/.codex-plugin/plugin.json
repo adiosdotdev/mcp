@@ -1,7 +1,7 @@
 {
   "name": "adios-mcp",
-  "version": "0.2.0",
-  "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
+  "version": "1.0.2",
+  "description": "Adios.dev helps users inspect team projects, edit workspace files, build and preview applications, review configuration and logs, and deploy approved builds to Adios workloads. It also retrieves hosted repository, database, agent-run, and observability information available to the signed-in team.",
   "author": {
     "name": "Adios Global LLC",
     "url": "https://www.adios.dev"
@@ -12,15 +12,18 @@
   "keywords": ["adios", "mcp", "deployment", "workspaces", "developer-tools"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "Adios MCP",
-    "shortDescription": "Build and operate projects on Adios",
-    "longDescription": "Connect to the OAuth-scoped Adios MCP server and use guided workflows to create workspaces, edit files, run previews, inspect logs, and deploy approved changes.",
-    "developerName": "Adios",
+    "displayName": "Adios.dev",
+    "shortDescription": "Build and deploy apps",
+    "longDescription": "Adios.dev helps users inspect team projects, edit workspace files, build and preview applications, review configuration and logs, and deploy approved builds to Adios workloads. It also retrieves hosted repository, database, agent-run, and observability information available to the signed-in team.",
+    "developerName": "Adios Global LLC",
     "category": "Developer Tools",
     "capabilities": ["Read", "Write"],
     "websiteURL": "https://www.adios.dev/mcp",
+    "supportURL": "https://www.adios.dev/docs",
     "privacyPolicyURL": "https://www.adios.dev/privacy",
     "termsOfServiceURL": "https://www.adios.dev/terms",
+    "logo": "./assets/adios-logo.png",
+    "composerIcon": "./assets/adios-logo.png",
     "defaultPrompt": [
       "Build and preview this project on Adios.",
       "Diagnose the latest Adios workspace failure.",

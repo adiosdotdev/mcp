@@ -24,7 +24,7 @@ Use an evidence-first diagnostic flow. Start with read-only tools, identify the 
 ## Operational actions
 
 - Prefer `restart_workspace_run` after a verified configuration or source fix.
-- Use `run_workspace_command` only when the specialized lint, build, start, stop, or restart tool does not fit.
+- Use `test_workspace` for declared unit tests and `integration_test_workspace` for declared integration tests. Use the dedicated lint, build, start, stop, or restart tool for those operations.
 - Poll long-running commands instead of issuing duplicates. Include relevant log excerpts in the summary without exposing secrets.
 - Ask for explicit approval before `stop_workspace_run`, file deletion, or deployment. Pass `approved=true` only after approval.
 

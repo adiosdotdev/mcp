@@ -1,5 +1,22 @@
 node_modules/
+
+# Generated release artifacts
+dist/
 *.tgz
+adios-dev-*.zip
+adios-mcp-*.zip
+
+# Python packaging cache
+__pycache__/
+*.py[cod]
+
+# Internal release submission material
+/openai/
+/docs/openai-*.md
+/scripts/package-openai-plugin.py
+/test/openai-package.test.js
+
+# Local files
 .DS_Store
 *.log
 .env

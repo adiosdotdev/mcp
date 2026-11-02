@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "adios-mcp",
-  "version": "0.2.0",
+  "version": "1.0.2",
   "description": "Build, preview, deploy, and operate Adios projects through the hosted Adios MCP server.",
   "author": {
     "name": "Adios Global LLC",

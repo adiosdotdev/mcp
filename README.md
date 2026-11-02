@@ -13,7 +13,7 @@ This repository packages the hosted Adios MCP service for public installation. I
 | Public connection metadata | `https://api.adios.dev/v1/mcp/config` |
 | Public tool discovery | `https://api.adios.dev/v1/mcp/tools` |
 
-Tool calls use Adios OAuth and are scoped to the authenticated user and team. Connection metadata and tool schemas are public; an Adios account is required to act on workspaces or workloads.
+Tool calls use Adios OAuth and act as the signed-in user. The connection can reach every team that user belongs to, and each tool call names the team it works on. Connection metadata and tool schemas are public; an Adios account is required to act on workspaces or workloads.
 
 ## Install in Codex
 
@@ -23,7 +23,7 @@ Register the GitHub marketplace:
 codex plugin marketplace add adiosdotdev/mcp
 ```
 
-Restart the ChatGPT desktop app, open **Plugins**, choose the **Adios** marketplace, install **Adios MCP**, and complete OAuth when prompted. The plugin installs the remote MCP connection and both workflow skills.
+Restart the ChatGPT desktop app, open **Plugins**, choose the **Adios** marketplace, install **Adios.dev**, and complete OAuth when prompted. The plugin installs the remote MCP connection and both workflow skills.
 
 To connect only the MCP server without the plugin:
 
@@ -132,7 +132,7 @@ settings and hosted connector setup.
 
 ## Safety
 
-Deploys, workload changes, runtime stops, remote Git pushes, and file deletion must remain approval-sensitive. Never commit Adios OAuth tokens, app credentials, or workspace secrets to this repository or to project source.
+Deploys, workload changes, runtime stops, remote Git pushes, pull request merges and closes, and file deletion must remain approval-sensitive. Never commit Adios OAuth tokens, app credentials, or workspace secrets to this repository or to project source.
 
 ## Repository layout
 
@@ -146,6 +146,7 @@ plugins/adios-mcp/.codex-plugin/       Codex plugin manifest
 plugins/adios-mcp/.claude-plugin/      Claude Code plugin manifest
 plugins/adios-mcp/.mcp.json            Hosted MCP connection
 plugins/adios-mcp/skills/              Codex and Claude Code workflows
+plugins/adios-mcp/assets/             Shared plugin branding
 gemini-extension.json                  Gemini CLI extension manifest
 GEMINI.md                              Gemini CLI extension context
 skills/                                Portable, Gemini, and Kimi workflow copies

@@ -1,6 +1,6 @@
 {
   "name": "@adiosdotdev/mcp",
-  "version": "0.2.0",
+  "version": "1.0.2",
   "description": "Connect MCP clients to Adios workspaces, previews, builds, logs, and deployments.",
   "type": "module",
   "bin": {

@@ -33,12 +33,13 @@ test("prints the package version", () => {
   const result = run("--version");
 
   assert.equal(result.status, 0, result.stderr || result.stdout);
-  assert.equal(result.stdout.trim(), "0.2.0");
+  assert.equal(result.stdout.trim(), readRepositoryJSON("package.json").version);
   assert.equal(result.stderr, "");
 });
 
 test("client extension manifests expose the hosted Adios MCP server", () => {
   const packageManifest = readRepositoryJSON("package.json");
+  const packageLock = readRepositoryJSON("package-lock.json");
   const portablePlugin = readRepositoryJSON("plugin.json");
   const portableMCP = readRepositoryJSON("mcp.json");
   const kimiPlugin = readRepositoryJSON("kimi.plugin.json");
@@ -53,6 +54,8 @@ test("client extension manifests expose the hosted Adios MCP server", () => {
   assert.equal(codexPlugin.version, packageManifest.version);
   assert.equal(claudePlugin.version, packageManifest.version);
   assert.equal(geminiExtension.version, packageManifest.version);
+  assert.equal(packageLock.version, packageManifest.version);
+  assert.equal(packageLock.packages[""].version, packageManifest.version);
   assert.equal(
     portablePlugin.$schema,
     "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
